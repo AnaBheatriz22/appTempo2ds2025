@@ -1,5 +1,4 @@
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
-
 import {
     createStaticNavigation,
     useNavigation,
@@ -17,6 +16,27 @@ export default function Home(){
                     onPress={()=>navigation.navigate('Itanhaem' as never)}
                 >
                     <Text style={styles.textoBtn}>Itanhaém</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                style={styles.btn}
+                onPress={()=>navigation.navigate('Catende' as never)}
+                >
+                    <Text style={styles.textoBtn}>Catende</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                style={styles.btn}
+                onPress={()=>navigation.navigate('Santos' as never)}
+                >
+                    <Text style={styles.textoBtn}>Santos</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                style={styles.btn}
+                onPress={()=>navigation.navigate('XiqueXique' as never)}
+                >
+                    <Text style={styles.textoBtn}>Xique-Xique</Text>
                 </TouchableOpacity>
         </View>
     );

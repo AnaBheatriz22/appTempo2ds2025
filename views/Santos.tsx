@@ -2,11 +2,11 @@ import {useState, useEffect} from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
 import Tempo from '../components/Tempo';
 import Api from '../components/Api';
-export default function Itanhaem(){
+export default function Santos(){
     const [dados, setDados] = useState<any[]>([]);
 
     async function buscaTempo(){
-        const response = await Api.get('weather?array_limit=4&fields=only_results,temp,city_name,forecast,condition,max,min,description,moon_phase,humidity,date&key=f5179305&city_name=Itanhaem,SP');
+        const response = await Api.get('weather?array_limit=4&fields=only_results,temp,city_name,forecast,condition,max,min,description,moon_phase,humidity,date&key=f5179305&city_name=Santos');
         setDados(response.data.forecast);
     }
     useEffect(
@@ -15,7 +15,7 @@ export default function Itanhaem(){
 
     return(
         <View style={styles.bloco}>
-            <Text style={styles.Texto}>Previsão do Tempo para Itanhaém</Text>
+            <Text style={styles.Texto}>Previsão do Tempo para Santos</Text>
 
             <FlatList 
                 data={dados}
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         flex:1,
         alignItems:'center',
         justifyContent:'flex-start',
-        marginTop:40
+        marginTop:30
     },
     Texto:{
         fontSize:20,
